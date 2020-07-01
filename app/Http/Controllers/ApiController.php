@@ -193,5 +193,29 @@ class ApiController extends Controller
         }
     }
 
+    //delte order
+    public function deleteOrder(Request $request, $orderID) {
+        $order = order::where("id", "=", $orderID);
+
+        if ($order->delete()) {
+            return response()->json(
+            [
+                "message" => "Order deleted successfully",
+                "status" => "success",
+                
+            ]
+            ,200);
+        } else {
+            return response()->json(
+            [
+                "message" => "something went wrong",
+                "status" => "success",
+                "data" => $order,
+                
+            ]
+            ,500);
+        }
+    }
+
     
 }
