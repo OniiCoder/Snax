@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::post('/api/add-category', 'ApiController@addCategory');
 Route::post('/api/add-food-item', 'ApiController@addFoodItem');
 Route::post('/api/add-new-order', 'ApiController@addNewOrder');
+Route::post('/api/update-order-to-completed/{orderID}', 'ApiController@updateOrder');
 
 Route::get('/api/all-items', 'ApiController@allItems');
 Route::get('/api/user-orders/{userID}', 'ApiController@item');

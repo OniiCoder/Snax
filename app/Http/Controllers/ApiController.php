@@ -158,5 +158,40 @@ class ApiController extends Controller
             ,200);
     }
 
+    //update order to completed
+    public function updateOrder(Request $request, $orderID) {
+        $order = order::find($orderID);
+
+        if ($order->status == "delivered") {
+            return response()->json(
+            [
+                "message" => "Order already updated to completed",
+                "status" => "success",
+                "data" => $order,
+                
+            ]
+            ,200);
+        } else if ($order->status == "pending") {
+            $order->status = "delivered";
+            $order->save();
+            return response()->json(
+            [
+                "message" => "Order updated to completed successfully",
+                "status" => "success",
+                "data" => $order,
+                
+            ]
+            ,200);
+        } else {
+            return response()->json(
+            [
+                "message" => "Something went wrong",
+                "status" => "failed",
+                
+            ]
+            ,500);
+        }
+    }
+
     
 }
