@@ -20,3 +20,4 @@ Route::post('/api/add-food-item', 'ApiController@addFoodItem');
 Route::post('/api/add-new-order', 'ApiController@addNewOrder');
 
 Route::get('/api/all-items', 'ApiController@allItems');
+Route::get('/api/user-orders/{userID}', 'ApiController@item');

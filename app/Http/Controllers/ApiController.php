@@ -59,6 +59,22 @@ class ApiController extends Controller
 
     }
 
+    // return all food items
+    public function allItems() {
+
+    	if ($items = FoodItem::get()) {
+    		$items_json = $items->toJson(JSON_PRETTY_PRINT);
+    		return response(
+    			[
+    				"message" => "Food Items returned successfully",
+					"status" => "success",
+					"itemCount" => $items->count(),
+					"data" => $items
+    			]
+    			,200);
+    	}
+    }
+
     //create new order
     public function addNewOrder(Request $request) {
     	$order = new Order;
@@ -86,18 +102,23 @@ class ApiController extends Controller
 
     }
 
-    public function allItems() {
+    // return all orders for a given userID
+    public function item($userID) {
 
-    	if ($items = FoodItem::get()) {
-    		$items_json = $items->toJson(JSON_PRETTY_PRINT);
-    		return response(
-    			[
-    				"message" => "Food Items returned successfully",
-					"status" => "success",
-					"itemCount" => $items->count(),
-					"data" => $items
-    			]
-    			,200);
-    	}
+    	$orders = Order::where("user_id", "=", $userID)
+        ->orderBy("id", "desc")
+        ->get();
+
+    	return response()->json(
+    		[
+    			"message" => "Orders for user with ID: " . $userID . " returned successfully",
+                "status" => "success",
+                "itemCount" => $orders->count(),
+                "data" => $orders,
+    			
+    		]
+    		,200);
     }
+
+    
 }
