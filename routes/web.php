@@ -21,3 +21,5 @@ Route::post('/api/add-new-order', 'ApiController@addNewOrder');
 
 Route::get('/api/all-items', 'ApiController@allItems');
 Route::get('/api/user-orders/{userID}', 'ApiController@item');
+Route::get('/api/pending-orders/{userID}', 'ApiController@pendingOrders');
+Route::get('/api/completed-orders/{userID}', 'ApiController@completedOrders');

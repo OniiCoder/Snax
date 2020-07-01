@@ -120,5 +120,43 @@ class ApiController extends Controller
     		,200);
     }
 
+    // return all pending orders for a given userID
+    public function pendingOrders($userID) {
+
+        $orders = Order::where("user_id", "=", $userID)
+        ->where("status", "=", "pending")
+        ->orderBy("id", "desc")
+        ->get();
+
+        return response()->json(
+            [
+                "message" => "Pending orders for user with ID: " . $userID . " returned successfully",
+                "status" => "success",
+                "itemCount" => $orders->count(),
+                "data" => $orders,
+                
+            ]
+            ,200);
+    }
+
+    // return all completed orders for a given userID
+    public function completedOrders($userID) {
+
+        $orders = Order::where("user_id", "=", $userID)
+        ->where("status", "=", "delivered")
+        ->orderBy("id", "desc")
+        ->get();
+
+        return response()->json(
+            [
+                "message" => "Completed orders for user with ID: " . $userID . " returned successfully",
+                "status" => "success",
+                "itemCount" => $orders->count(),
+                "data" => $orders,
+                
+            ]
+            ,200);
+    }
+
     
 }
