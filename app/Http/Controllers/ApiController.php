@@ -85,4 +85,19 @@ class ApiController extends Controller
     		);
 
     }
+
+    public function allItems() {
+
+    	if ($items = FoodItem::get()) {
+    		$items_json = $items->toJson(JSON_PRETTY_PRINT);
+    		return response(
+    			[
+    				"message" => "Food Items returned successfully",
+					"status" => "success",
+					"itemCount" => $items->count(),
+					"data" => $items
+    			]
+    			,200);
+    	}
+    }
 }

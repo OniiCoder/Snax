@@ -19,4 +19,4 @@ Route::post('/api/add-category', 'ApiController@addCategory');
 Route::post('/api/add-food-item', 'ApiController@addFoodItem');
 Route::post('/api/add-new-order', 'ApiController@addNewOrder');
 
-Route::get('/api/all-items', 'ApiController@controller');
+Route::get('/api/all-items', 'ApiController@allItems');
