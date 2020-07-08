@@ -2,12 +2,15 @@
 
 namespace App;
 
+// use Illuminate\Http\Request;
+use App\Notifications\PasswordResetNotification;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -26,4 +29,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new PasswordResetNotification($token));
+    }
 }

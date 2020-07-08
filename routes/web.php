@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/api/register', 'Api\AuthController@register');
+Route::post('/api/login', 'Api\AuthController@login');
+Route::post('/api/password/email', 'Api\ForgotPasswordController@sendResetLinkEmail');
+Route::post('/api/password/reset', 'Api\ResetPasswordController@reset');
+
 Route::post('/api/add-category', 'ApiController@addCategory');
 Route::post('/api/add-food-item', 'ApiController@addFoodItem');
 Route::post('/api/add-new-order', 'ApiController@addNewOrder');
