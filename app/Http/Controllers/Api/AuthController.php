@@ -20,19 +20,25 @@ class AuthController extends Controller
     	// encrypt password
     	$validatedData['password'] = bcrypt($request->password);
 
-    	//create new user
-    	$user = User::create($validatedData);
+    	try {
+    		//create new user
+	    	$user = User::create($validatedData);
 
-    	// create access token for registered user
-    	$accessToken = $user->createToken('authToken')->accessToken;
+	    	// create access token for registered user
+	    	$accessToken = $user->createToken('authToken')->accessToken;
 
-    	// return created user
-    	return response(
-    		[
-    			'user' => $user, 
-    			'access_token' => $accessToken
-    		]
-    	);
+	    	// return created user
+	    	return response(
+	    		[
+	    			'user' => $user, 
+	    			'access_token' => $accessToken
+	    		]
+	    	);
+    	} catch (Exception $e) {
+    		return $e;
+    	}
+
+    	
 
     }
 
