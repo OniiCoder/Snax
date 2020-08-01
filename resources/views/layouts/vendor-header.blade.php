@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NxtGen">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Buy snacks and drinks swiftly with Snax on the go!">
+    <meta name="og:description" content="Buy snacks and drinks swiftly with Snax on the go!">
+    <title>Snax Vendor</title>
+
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/orders.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/products.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    <title>Snax Dashboard</title>
+    
 </head>
 <body>
     <!-- Navbar -->
