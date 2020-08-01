@@ -50,43 +50,10 @@
     <section class="note">
         <div class="container">
             <p class="note-head">Notifications</p>
+            
             <div class="note-tab">
-                <div class="row">
-                    <div class="col-sm-1">
-                        <img src="{{ asset('assets/img/icon/Ellipse 1.svg') }}" alt="">
-                    </div>
-                    <div class="col-sm">
-                        <div class="note-details">
-                           <p class="note-title">New Order <span>#303030</span></p>
-                            <img class="note-side" src="assets/img/icon/Group 28.svg') }}" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="note-tab">
-                <div class="row">
-                    <div class="col-sm-1">
-                        <img src="{{ asset('assets/img/icon/Ellipse 1.svg') }}" alt="">
-                    </div>
-                    <div class="col-sm">
-                        <div class="note-details">
-                           <p class="note-title">New Order <span>#303030</span></p>
-                            <img class="note-side" src="{{ asset('assets/img/icon/Group 28.svg') }}" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="note-tab">
-                <div class="row">
-                    <div class="col-sm-1">
-                        <img src="{{ asset('assets/img/icon/Ellipse 1.svg') }}" alt="">
-                    </div>
-                    <div class="col-sm">
-                        <div class="note-details">
-                           <p class="note-title">New Order <span>#303030</span></p>
-                            <img class="note-side" src="{{ asset('assets/img/icon/Group 28.svg') }}" alt="" srcset="">
-                        </div>
-                    </div>
+                <div class="note-details">
+                    <p class="note-title">You have <span>{{ $totalPendingOrders }}</span> new orders,<br class="break" style="display: none;" /> <a style="text-decoration: underline !important ;" href="{{ url('/vendor/orders') }}">see here</a></p>
                 </div>
             </div>
         </div>

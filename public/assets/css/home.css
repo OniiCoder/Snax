@@ -110,6 +110,10 @@ a{
 }
 .note-details{
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 .note-tab{
     width: 100%;

@@ -12,7 +12,9 @@ class VendorController extends Controller
     public function index() {
         $totalOrders = Order::get()->count();
         $totalItems = FoodItem::get()->count();
-        return view('vendor-dashboard.home', compact('totalOrders', 'totalItems'));
+        $totalPendingOrders = Order::where('status', '=', 'pending')->get()->count();
+
+        return view('vendor-dashboard.home', compact('totalOrders', 'totalItems', 'totalPendingOrders'));
     }
 
     public function orders() {

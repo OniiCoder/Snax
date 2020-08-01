@@ -1,3 +1,5 @@
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
 .navbar{
     padding-left: 0;
@@ -27,6 +29,7 @@
     margin-top: 10px;
     margin-left: 0;
 }
+
 }
 
 @media (min-width: 501px) and (max-width: 767px) {
@@ -84,6 +87,10 @@
 }
 .navbar-brand > img{
     width: 60px;
+}
+
+.break {
+    display: inline !important;
 }
     
 }
