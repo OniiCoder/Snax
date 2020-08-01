@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Snax API
+                    Snax API 😎
                 </div>
             </div>
         </div>

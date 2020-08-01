@@ -193,7 +193,7 @@ class ApiController extends Controller
         }
     }
 
-    //delte order
+    //delete order
     public function deleteOrder(Request $request, $orderID) {
         $order = order::where("id", "=", $orderID);
 

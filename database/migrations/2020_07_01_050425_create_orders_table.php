@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->integer('food_id');
             $table->integer('quantity');
-            $table->enum('status', ['pending', 'delivered']);
+            $table->enum('status', ['pending', 'in-progress', 'en-route', 'delivered']);
             $table->timestamps();
         });
     }

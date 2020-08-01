@@ -30,3 +30,14 @@ Route::get('/api/all-items', 'ApiController@allItems');
 Route::get('/api/user-orders/{userID}', 'ApiController@item');
 Route::get('/api/pending-orders/{userID}', 'ApiController@pendingOrders');
 Route::get('/api/completed-orders/{userID}', 'ApiController@completedOrders');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Vendor Routes
+Route::get('/vendor/home', 'VendorController@index');
+Route::get('/vendor/orders', 'VendorController@orders');
+Route::get('/vendor/products', 'VendorController@products');
+
+
