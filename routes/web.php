@@ -40,4 +40,7 @@ Route::get('/vendor/home', 'VendorController@index');
 Route::get('/vendor/orders', 'VendorController@orders');
 Route::get('/vendor/products', 'VendorController@products');
 
+//Vendor Routes
+Route::get('/logistics/home', 'LogisticController@index');
+Route::get('/logistics/orders', 'LogisticController@orders');
 

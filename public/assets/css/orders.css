@@ -13,6 +13,21 @@ a{
     text-decoration: none !important;
 }
 
+.address{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #D7A100;
+}
+.tel{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #D7A100;
+}
+
 /* Navbar Styles */
 .logout-button{
     background: #FCBE04;
