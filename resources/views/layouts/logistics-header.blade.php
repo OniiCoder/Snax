@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta name="description" content="Buy snacks and drinks swiftly with Snax on the go!">
     <meta name="og:description" content="Buy snacks and drinks swiftly with Snax on the go!">
-    <title>Snax Vendor Dashboard Demo</title>
+    <title>Snax Logistics Dashboard Demo</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
