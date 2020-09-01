@@ -39,6 +39,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/vendor/home', 'VendorController@index');
 Route::get('/vendor/orders', 'VendorController@orders');
 Route::get('/vendor/products', 'VendorController@products');
+Route::get('/vendor/business-profile', 'VendorController@profile');
+//new business register
+Route::post('/vendor/save-business', 'VendorController@saveBusiness');
 
 //Vendor Routes
 Route::get('/logistics/home', 'LogisticController@index');

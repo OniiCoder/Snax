@@ -52,7 +52,7 @@ a{
     border-radius: 100px;
 }
 #subnav-link{
-    width: 150px;
+    min-width: 150px;
 }
 .nav-link{
     text-align: center;

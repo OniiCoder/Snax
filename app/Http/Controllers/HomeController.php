@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Order;
+use App\FoodItem;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // return view('home');
+        $totalOrders = Order::get()->count();
+        $totalItems = FoodItem::get()->count();
+        $totalPendingOrders = Order::where('status', '=', 'pending')->get()->count();
+
+        return view('vendor-dashboard.home', compact('totalOrders', 'totalItems', 'totalPendingOrders'));
     }
 }

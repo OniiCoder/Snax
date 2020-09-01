@@ -49,7 +49,7 @@
 
     <section class="note">
         <div class="container">
-            <p class="note-head">Notifications</p>
+            <p class="note-head">Hi, {{ Auth::user()->name }}</p>
             
             <div class="note-tab">
                 <div class="note-details">

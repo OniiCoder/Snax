@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff!important;
+}
+a{
+    text-decoration: none !important;
+}
+p,a,h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+.siv{
+    max-width: 340px;
+    padding: 40px 20px;
+    margin: auto;
+}
+hr{
+    text-align: center;
+    margin-top: 40px;
+}
+hr:after {
+    content: 'Or';
+    padding: 0 8px;
+    position: relative;
+    top: -13px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.3);
+    background: #fff;
+}
+.head-logo{
+    text-align: center;
+}
+.auth-login{
+    text-align: center;
+    width: 100px;
+    padding: 5px 0px;
+    border-radius: 100px;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    outline: hidden;
+}
+.auth-buttons{
+    text-align: center;
+    margin-top: 40px;
+}
+.siv-form{
+    background: #FFFFFF;
+    border: 1.5px solid #FCBE04;
+    border-radius: 30px;
+    height: 55px;
+    padding: 15px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(0, 0, 0, 0.2);
+}
+.siv-label{
+    background: #FCBE04;
+    border-radius: 30px;
+    padding: 4px 12px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    position: relative;
+    top: 22px;
+    left: 22px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+.fp{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.fp:active, .fp:hover, .fp:focus{
+    color: #FCBE04;
+}
+.siv-submit{
+    width: 100%;
+    background: #FCBE04;
+    border: none;
+    border-radius: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    outline: hidden;
+    height: 55px;
+    padding: 10px 20px;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 30px;
+}
+.foot{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-top: 1rem;
+}
+.foot-link{
+    color: #FCBE04;
+    font-weight: 600;
+}
+.foot-link:hover{
+    color: #FCBE04;
+}
+button:focus{
+    outline: none;
+}
+textarea.form-control{
+    height: 150px;
+}

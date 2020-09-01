@@ -1,0 +1,79 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .dash-img{
+        width: 40px;
+    }
+    .dash-head{
+        line-height: 20px;
+    }
+    .dash-sub{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .odd-butt{
+        display: block;
+    }
+    .in-pro{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    }
+    
+    @media (min-width: 501px) and (max-width: 767px) {
+        .navbar{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .container{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        #subnav-link{
+            margin-top: 20px;
+        }
+        .dash-con{
+            margin-bottom: 20px;
+        }
+        .food-card{
+            margin-bottom: 20px;
+        }
+        .odd-card{
+            margin-bottom: 20px;
+        }
+        .logout-button{
+            width: 100px;
+        }
+        .navbar-brand > img{
+            width: 60px;
+        }
+    }
+    
+    @media (min-width: 200px) and (max-width: 500px) {
+    .navbar{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #subnav-link{
+        margin-top: 20px;
+    }
+    .dash-con{
+        margin-bottom: 20px;
+    }
+    .uni-card{
+        margin-bottom: 20px;
+    }
+    .logout-button{
+        width: 100px;
+    }
+    .navbar-brand > img{
+        width: 60px;
+    }
+        
+    }
