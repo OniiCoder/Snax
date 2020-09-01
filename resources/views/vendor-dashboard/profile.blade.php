@@ -3,7 +3,13 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/signinandsignup.css') }}">
 
-    <section class="note">
+<style>
+    body{
+        background-color: #f9f9f9 !important;
+    }
+</style>
+
+    <section class="notee">
         <div class="container">
             <p class="note-head">Hi, {{ Auth::user()->name }}</p>
             
