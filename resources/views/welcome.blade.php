@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcom to Snax 😎
+                    Welcome to Snax 😎
                 </div>
             </div>
         </div>
